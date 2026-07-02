@@ -78,7 +78,7 @@
                                                         <td>
                                                             @if ($shop->image_path)
                                                                 {{-- 店舗画像を表示 --}}
-                                                                <img src="{{ asset('storage/shops/' . $shop->image_path) }}"
+                                                                <img src="{{ asset('images/shops/' . $shop->image_path) }}"
                                                                     alt="{{ $shop->name }}" class="img-thumbnail"
                                                                     style="width: 60px; height: 60px; object-fit: cover;">
                                                             @else
