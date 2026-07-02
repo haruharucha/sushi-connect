@@ -1,8 +1,14 @@
 # 🍣 すしコネクト
 
-**Laravel・PHP・MariaDB を使用した寿司予約Webアプリ**
+**Laravelを使用した寿司予約Webアプリ**
 
 旬の魚からも店舗検索ができる、寿司屋特化型の予約Webアプリです。
+
+## 🌐 デモサイト
+
+👉 https://sushi-connect.onrender.com
+
+※ Render無料プランを利用しているため、初回アクセス時は起動まで30〜60秒ほどかかる場合があります。
 
 
 ## アプリ概要
@@ -90,14 +96,16 @@
 |----------|------|
 | バックエンド | PHP 8.2 / Laravel 8.83.29 |
 | フロントエンド | HTML / CSS / Bootstrap 5 / Tailwind CSS / JavaScript |
-| データベース | MariaDB（XAMPP） |
+| データベース（開発） | MariaDB（XAMPP） |
+| データベース（本番） | PostgreSQL（Neon） |
 | ORM | Eloquent ORM |
 | 認証 | Laravel Breeze |
 | 日時処理 | Carbon |
-| デザイン | Bootstrap Icons |
 | テンプレートエンジン | Blade |
 | メール | Mailtrap（開発環境） |
 | 開発環境 | Visual Studio Code / XAMPP |
+| コンテナ | Docker |
+| デプロイ | Render |
 | バージョン管理 | Git / GitHub |
 
 ## ER図
@@ -168,7 +176,7 @@ cp .env.example .env
 
 php artisan key:generate
 
-php artisan migrate
+php artisan migrate --seed
 
 php artisan serve
 ```
