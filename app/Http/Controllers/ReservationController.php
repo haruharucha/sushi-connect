@@ -80,8 +80,8 @@ class ReservationController extends Controller
             ]);
 
             // 予約完了メールを送信
-            $userEmail = Auth::user()->email; 
-            Mail::to($userEmail)->send(new ReservationConfirmed($reservation));
+           // $userEmail = Auth::user()->email; 
+           // Mail::to($userEmail)->send(new ReservationConfirmed($reservation));
 
             // 完了画面へリダイレクト
             return redirect()->route('reservations.done')
