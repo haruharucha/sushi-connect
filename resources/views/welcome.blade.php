@@ -83,7 +83,8 @@
         <div class="container py-3 py-md-4">
             <h1 class="fw-bold display-5 hero-title">美味しいお寿司と、<br class="d-block d-md-none">
                 あなたを繋ぐ。</h1>
-            <p class="lead fw-bold text-white hero-subtitle" style="opacity: 0.85;">「すしコネクト」は、地元の素敵なお寿司屋さんを簡単に探して予約できるサービスです。</p>
+            <p class="lead fw-bold text-white hero-subtitle" style="opacity: 0.85;">
+                「すしコネクト」は、地元の素敵なお寿司屋さんを簡単に探して予約できるサービスです。</p>
         </div>
     </header>
 
@@ -129,8 +130,8 @@
 
                         {{-- 🗺️ エリア（都道府県）選択 --}}
                         <div class="col-md-4">
-                            <label class="form-label small text-secondary"><i
-                                    class="bi bi-geo-alt text-danger"></i> エリア</label>
+                            <label class="form-label small text-secondary"><i class="bi bi-geo-alt text-danger"></i>
+                                エリア</label>
                             <select name="area" class="form-select">
                                 <option value="">すべてのエリア</option>
                                 <option value="静岡県" {{ request('area') == '静岡県' ? 'selected' : '' }}>静岡県</option>
@@ -141,8 +142,8 @@
 
                         {{-- 🔍 キーワード入力（店名・ネタ名など） --}}
                         <div class="col-md-5">
-                            <label class="form-label small text-secondary"><i
-                                    class="bi bi-search text-danger"></i> キーワード</label>
+                            <label class="form-label small text-secondary"><i class="bi bi-search text-danger"></i>
+                                キーワード</label>
                             <input type="text" name="keyword" class="form-control" placeholder="店名、ネタ（マグロ等）、特徴など"
                                 value="{{ request('keyword') }}">
                         </div>
@@ -185,7 +186,7 @@
                 <div class="col-12 col-md-4">
                     <div class="card h-100 shadow-sm border-0">
                         @if ($shop->image_path)
-                            <img src="{{ asset('storage/shops/' . $shop->image_path) }}" class="card-img-top"
+                            <img src="{{ asset('images/shops/' . $shop->image_path) }}" class="card-img-top"
                                 alt="{{ $shop->name }}" style="height: 200px; object-fit: cover;">
                         @else
                             <div class="bg-secondary text-white d-flex flex-column align-items-center justify-content-center"

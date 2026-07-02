@@ -55,7 +55,7 @@
                     {{-- お店情報カード --}}
                     <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6">
                         @if ($shop->image_path)
-                            <img src="{{ asset('storage/shops/' . $shop->image_path) }}" alt="{{ $shop->name }}"
+                            <img src="{{ asset('images/shops/' . $shop->image_path) }}" alt="{{ $shop->name }}"
                                 class="w-full h-56 md:h-96 object-cover rounded-lg mb-6 shadow-sm hover:scale-[1.01] transition">
                         @else
                             <div
