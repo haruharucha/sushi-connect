@@ -1,0 +1,7 @@
+.env
+node_modules
+vendor
+.git
+.gitignore
+README.md
+screenshots
