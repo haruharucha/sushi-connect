@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->boolean('is_admin')->default(0)->comment('0:一般ユーザー, 1:管理者');/**default(0) の意味： 新しく会員登録した人は、最初はみんな自動的に「0（一般ユーザー）」として登録される */
+            $table->boolean('is_admin')->default(false);
             $table->rememberToken();
             $table->timestamps();
         });
