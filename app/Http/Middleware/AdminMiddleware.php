@@ -18,10 +18,11 @@ class AdminMiddleware
     public function handle(Request $request, Closure $next)
     {
         // ログイン済みかつ管理者かを確認
-        if (!Auth::check() || Auth::user()->is_admin !== 1) {
+        if (!Auth::check() || !Auth::user()->is_admin) {
             abort(403, '管理者権限がありません。アクセス権が必要です。');
         }
 
         return $next($request);
-    }
+    }   
+
 }
